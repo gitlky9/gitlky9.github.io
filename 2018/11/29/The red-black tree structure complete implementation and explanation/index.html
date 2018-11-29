@@ -5,15 +5,37 @@
   
 
   
-  <title>Hexo</title>
+  <title>The red-black tree structure complete implementation and explanation | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="The red-black tree structure is known for its balanced and efficient random access. In the actual use process, its efficiency is beyond imagination (the more nodes, the higher efficiency). In most cas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The red-black tree structure complete implementation and explanation">
+<meta property="og:url" content="http://yoursite.com/2018/11/29/The red-black tree structure complete implementation and explanation/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="The red-black tree structure is known for its balanced and efficient random access. In the actual use process, its efficiency is beyond imagination (the more nodes, the higher efficiency). In most cas">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/1c35e7df5bdab0e9894ac68b10e1e9cd_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/9e28aa921cfd812c0872fb2bea459010_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/0535f558a809162ff401e2cc6b3a4d2e_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/5884bef7b70f09f56a6d263dc4f953d7_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/c15751690610fe57ef81324d3e6084f5_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/f3585be75d7c157fbee1f4d2413e4cef_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/2274790b3ea9561782079545eefb7c40_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/9b9d154b75470e91b9cab9e6cb677388_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/90fff1be054a42c13b5b630a0ad0cb14_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/16a3384b2ace6fc522be868ec4c20de3_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/434df126cbc3d23e9c64331f987f4aac_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/8944a56523b64136308da9deb29ad47d_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/e4dc69a2966450f168779e788bd60ecb_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/8007c7b8832171d0b4feaf17b20d83f1_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/87e5180fa11c7a98b37140710b8049f1_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/0e4e35ebcd8489cd09a0b752fa569b82_70.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/098fae7d39f5ab670e784c09675999e9_70.png">
+<meta property="og:updated_time" content="2018-11-29T14:49:34.393Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="The red-black tree structure complete implementation and explanation">
+<meta name="twitter:description" content="The red-black tree structure is known for its balanced and efficient random access. In the actual use process, its efficiency is beyond imagination (the more nodes, the higher efficiency). In most cas">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/29/The%20red-black%20tree%20structure%20complete%20implementation%20and%20explanation/_image/1c35e7df5bdab0e9894ac68b10e1e9cd_70.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +82,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-The red-black tree structure complete implementation and explanation" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-The red-black tree structure complete implementation and explanation" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/29/The red-black tree structure complete implementation and explanation/" class="article-date">
   <time datetime="2018-11-29T10:50:24.263Z" itemprop="datePublished">2018-11-29</time>
@@ -75,8 +95,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/29/The red-black tree structure complete implementation and explanation/">The red-black tree structure complete implementation and explanation</a>
+    <h1 class="article-title" itemprop="name">
+      The red-black tree structure complete implementation and explanation
     </h1>
   
 
@@ -131,11 +151,9 @@ Disadvantage: Redundant expenditure caused by tree rotation.
     </footer>
   </div>
   
-</article>
-
-
+    
   
-
+</article>
 
 </section>
         
