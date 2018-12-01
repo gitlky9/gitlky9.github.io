@@ -89,30 +89,30 @@
 <pre><code>Advantages: Keep the height of the tree balanced when querying the nodes many times (no more than three rotations in rotation and no more than two rotations in insertion data);
 
 Disadvantage: Redundant expenditure caused by tree rotation.
-</code></pre><p>   Insertion of red-black trees:<br>  <img src="../css/images/1c35e7df5bdab0e9894ac68b10e1e9cd_70.png" alt=""><br>   You can see from the picture ,Red and black tree root node (the node 20) ,The left side of the node (node 10) is smaller than the root node ,The node (30) node on the right side is greater than the root node , the right side node (parent node 30)  is less than the right son node (node 40),No matter how many nodes the mangrove tree has, it balances in this way (The root node or branch node is larger than their left node and smaller than their right node).         </p>
+</code></pre><p>   Insertion of red-black trees:<br>  <img src="/css/images/1c35e7df5bdab0e9894ac68b10e1e9cd_70.png" alt=""><br>   You can see from the picture ,Red and black tree root node (the node 20) ,The left side of the node (node 10) is smaller than the root node ,The node (30) node on the right side is greater than the root node , the right side node (parent node 30)  is less than the right son node (node 40),No matter how many nodes the mangrove tree has, it balances in this way (The root node or branch node is larger than their left node and smaller than their right node).         </p>
 <pre><code>A red-black tree, in the form of small left big right to traverse the query,Query to the stop empty nodes ,And  returning to an  empty node previous node As the parent node to insert (If less than the parent node as insert the left  node of the parent node ,If is greater than the parent node as insert the right node of the parent node) ,Refer to the following code :
 </code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> //Returns the location of the node to be inserted</span><br><span class="line">Test_Rb_tree_node_base* Test_Rb_tree::Test_M_lower_bound(Test_Rb_tree_Ptr x,Test_Rb_tree_Ptr y,unsigned int val)</span><br><span class="line">&#123;</span><br><span class="line">    while (x != 0)</span><br><span class="line">    &#123;</span><br><span class="line">        int nless = compare_less(x, val);</span><br><span class="line">        if (-1 == nless)//The current node is less than the query to the nodes</span><br><span class="line">            y = x, x = Left(x);</span><br><span class="line">        else if (1 == nless)//The current node is greater than the query to the nodes</span><br><span class="line">            x = Right(x);</span><br><span class="line">        else//If equal, the data is no longer inserts, returned directly</span><br><span class="line">            return 0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Explain briefly… :<br>   This article from the CSDN ,Because of Not Much time… ,Most of the content and pictures no modification,In the future, new articles try to avoid this situation…..</p>
 <p>Back to the topic… :</p>
 <p>Insert situation one ,Right node insert :</p>
-<p><img src="../css/images/9e28aa921cfd812c0872fb2bea459010_70.png" alt=""></p>
-<p><img src="../css/images/0535f558a809162ff401e2cc6b3a4d2e_70.png" alt=""></p>
-<p><img src="../css/images/5884bef7b70f09f56a6d263dc4f953d7_70.png" alt=""></p>
-<p><img src="../css/images/c15751690610fe57ef81324d3e6084f5_70.png" alt=""></p>
-<p><img src="../css/images/f3585be75d7c157fbee1f4d2413e4cef_70.png" alt=""></p>
-<p><img src="../css/images/2274790b3ea9561782079545eefb7c40_70.png" alt=""></p>
+<p><img src="/css/images/9e28aa921cfd812c0872fb2bea459010_70.png" alt=""></p>
+<p><img src="/css/images/0535f558a809162ff401e2cc6b3a4d2e_70.png" alt=""></p>
+<p><img src="/css/images/5884bef7b70f09f56a6d263dc4f953d7_70.png" alt=""></p>
+<p><img src="/css/images/c15751690610fe57ef81324d3e6084f5_70.png" alt=""></p>
+<p><img src="/css/images/f3585be75d7c157fbee1f4d2413e4cef_70.png" alt=""></p>
+<p><img src="/css/images/2274790b3ea9561782079545eefb7c40_70.png" alt=""></p>
 <p>Insertion situation two ,Left node insert :</p>
-<p><img src="../css/images/9b9d154b75470e91b9cab9e6cb677388_70.png" alt=""></p>
-<p><img src="../css/images/90fff1be054a42c13b5b630a0ad0cb14_70.png" alt=""></p>
-<p><img src="../css/images/16a3384b2ace6fc522be868ec4c20de3_70.png" alt=""></p>
-<p><img src="../css/images/434df126cbc3d23e9c64331f987f4aac_70.png" alt=""></p>
-<p><img src="../css/images/8944a56523b64136308da9deb29ad47d_70.png" alt=""></p>
-<p><img src="../css/images/e4dc69a2966450f168779e788bd60ecb_70.png" alt=""></p>
+<p><img src="/css/images/9b9d154b75470e91b9cab9e6cb677388_70.png" alt=""></p>
+<p><img src="/css/images/90fff1be054a42c13b5b630a0ad0cb14_70.png" alt=""></p>
+<p><img src="/css/images/16a3384b2ace6fc522be868ec4c20de3_70.png" alt=""></p>
+<p><img src="/css/images/434df126cbc3d23e9c64331f987f4aac_70.png" alt=""></p>
+<p><img src="/css/images/8944a56523b64136308da9deb29ad47d_70.png" alt=""></p>
+<p><img src="/css/images/e4dc69a2966450f168779e788bd60ecb_70.png" alt=""></p>
 <p>Insertion situation three ,The root node left rotation :</p>
-<p><img src="../css/images/8007c7b8832171d0b4feaf17b20d83f1_70.png" alt=""></p>
-<p><img src="../css/images/87e5180fa11c7a98b37140710b8049f1_70.png" alt=""></p>
-<p><img src="../css/images/0e4e35ebcd8489cd09a0b752fa569b82_70.png" alt=""></p>
-<p><img src="../css/images/098fae7d39f5ab670e784c09675999e9_70.png" alt=""></p>
+<p><img src="/css/images/8007c7b8832171d0b4feaf17b20d83f1_70.png" alt=""></p>
+<p><img src="/css/images/87e5180fa11c7a98b37140710b8049f1_70.png" alt=""></p>
+<p><img src="/css/images/0e4e35ebcd8489cd09a0b752fa569b82_70.png" alt=""></p>
+<p><img src="/css/images/098fae7d39f5ab670e784c09675999e9_70.png" alt=""></p>
 <p>Can be seen from the above example :</p>
 <ol>
 <li>The same color will not appear between the parent node and the node when the red-black tree is not moving(For example, they are all red) ;</li>
@@ -125,7 +125,7 @@ Disadvantage: Redundant expenditure caused by tree rotation.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/29/The red-black tree structure complete implementation and explanation/" data-id="cjp5apeai0000dkim49hkhqv8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/29/The red-black tree structure complete implementation and explanation/" data-id="cjp5nddnh000098im2fmtpb3w" class="article-share-link">Share</a>
       
       
     </footer>
